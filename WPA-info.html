@@ -20,22 +20,22 @@
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 	<span class="navbar-toggler-icon"></span>
 </button>
-<div class="collapse navbar-collapse" id="navbarResponsive">
+<div class="collapse navbar-collapse" id="navbarResponsive" style="background-color:darkcyan">
 		<ul class="navbar-nav ml-auto">
 			<li class="navbar-item">
-				<a class="nav-link" href="index.html">Inicio</a>
+				<a class="nav-link" href="index.html" style="color: white;">Inicio</a>
 			</li>
 			<li class="navbar-item">
-				<a class="nav-link" href="WEP-info.html">WEP</a>
+				<a class="nav-link" href="WEP-info.html" style="color: white;">WEP</a>
 			</li>
 			<li class="navbar-item">
-				<a class="nav-link" href="#">WPA</a>
+				<a class="nav-link" href="WPA2-info.html" style="color: white;">WPA2</a>
 			</li>
 			<li class="navbar-item">
-				<a class="nav-link" href="WPA2-info.html">WPA2</a>
+				<a class="nav-link" href="#" style="color: white;">WPA</a>
 			</li>
 			<li class="navbar-item">
-				<a class="nav-link" href="Equipo.html">Creditos</a>
+				<a class="nav-link" href="Equipo.html" style="color: white;">Creditos</a>
 			</li>
 		</ul>
 </div>
@@ -47,28 +47,22 @@
 		<img src="img/WPAicon.png" class="img-fluid col-md-6 col-lg-3 logo" alt="Responsive image">
 		<div class="col-md-12 col-lg-12 pg">
 			<h2>¿Que es WPA?</h2>
-			<p>WPA(WiFi Protected Access o Acceso Wi-Fi Protegido) fue presentado en 2003 como una respuesta directa a los problemas observados en el protocolo WEP. WPA utiliza el protocolo de integridad de clave temporal (TKIP) para cifrar los datos enviados durante la coneccion, tkip utiliza el mismo algoritmo de cifrado que el utilizado en WEP pero la generación de la clave se realiza de manera diferente. TKIP comienza con una clave temporal de 128 bits que es compartida tanto por el punto de acceso como también por el host, luego combina esta clave temporal con la dirección mac del host y un contador que va aumentando paquete a paquete y luego agrega un vector de iniciación de 48 bits para así crear la clave de cifrado de datos. Para evitar la detección de la clave de cifrado tkip cambia la clave temporal cada 10.000 paquetes lo que produce una nueva clave para cada cliente y la variación de las claves durante la conexión.</p>
+			<p style="text-align:justify">Wi-Fi Protected Access (WPA), en español «Acceso Wi-Fi protegido», es un sistema para proteger las redes inalámbricas (Wi-Fi); creado para corregir las deficiencias del sistema previo, Wired Equivalent Privacy (WEP).1​ Los investigadores han encontrado varias debilidades en el algoritmo WEP (tales como la reutilización del vector de inicialización (IV), del cual se derivan ataques estadísticos que permiten recuperar la clave WEP, entre otros). WPA implementa la mayoría del estándar IEEE 802.11i, y fue creado como una medida intermedia para ocupar el lugar de WEP mientras 802.11i era finalizado. </p>
 
-			<p>El objetivo de este sistema es proporcionar a la red inalámbrica la misma seguridad que tiene una red cableada (de ahí su nombre).</p>
-
-			<p>Para encriptar mensajes usan claves de 104 o 40 bits (WEP 128 o WEP 64).</p>
+			<p style="text-align:justify">WPA adopta la autenticación de usuarios mediante el uso de un servidor, donde se almacenan las credenciales y contraseñas de los usuarios de la red. Para no obligar al uso de tal servidor para el despliegue de redes, WPA permite la autenticación mediante una clave precompartida, que de un modo similar al WEP, requiere introducir la misma clave en todos los equipos de la red.</p>
 
 			<img class="img-fluid col-lg-8 center" src="img/WPA_algorithm.png">
 
-			<p>Para autenticar existen dos posibilidades:<br>
-				<ul>
-					<li><b>Sistema abierto u Open system</b> El cliente no se autentica para asociarse con el punto de acceso, pero una vez asociado sí tendrá que tener la clave WEP correcta para poder comunicarse.
-					</li>
-
-					<li><b>Clave precompartida, Pre-Shared Keys o PSK</b> En este caso existe una clave precompartida, que se usa tanto para la autenticación como para el cifrado WEP.
-					</li>
-				</ul>
-				Es aconsejable usar la autenticación de sistema abierto para la autenticación WEP (es decir, sin autenticación), ya que es posible averiguar la clave WEP (que se usará en el cifrado de datos en la red) interceptando los paquetes intercambiados entre equipo y punto de acceso en la fase de autenticación. 
-			</p>
+			<h5>Seguridad, ataques WPA TKIP</h5>
+			<p>TKIP es vulnerable a un ataque de recuperación de keystream, esto es, sería posible reinyectar tráfico en una red que utilizara WPA TKIP.4​ Esto es posible por diversas causas, algunas de ellas heredadas de WEP. Entre las causas, cabe destacar la evasión de las medidas anti reinyección de TKIP y se sigue una metodología similar a la utilizada en el popular ataque CHOP CHOP sobre el protocolo WEP.</p>
+			<img class="img-fluid col-lg-8 center" src="img/TKIP.jpeg">
+			<p>La evasión de protección anti reinyección de TKIP es posible debido a los diversos canales que se utilizan en el modo QoS especificado en el estándar 802.11ie, aunque también existe la posibilidad de aplicarlo en redes no QoS.</p>
+			
 		</div>
 </div>
 </div>
 <hr class="my-4">
+
 <!--- Footer -->
 <footer>
 <div class="container-fluid padding">
